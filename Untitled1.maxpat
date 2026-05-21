@@ -9,8 +9,268 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 101.0, 960.0, 1194.0 ],
+        "rect": [ 2283.0, 35.0, 960.0, 1194.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-24",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 1074.75, 250.17, 44.0, 22.0 ],
+                    "text": "noise~"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-23",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 928.0, 277.0, 80.0, 22.0 ],
+                    "text": "loadmess 0.1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-22",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 836.0, 277.0, 87.0, 22.0 ],
+                    "text": "loadmess 100."
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-21",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 2,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [ 59.0, 120.0, 1000.0, 780.0 ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-14",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "multichannelsignal" ],
+                                    "patching_rect": [ 208.0, 100.0, 114.0, 22.0 ],
+                                    "text": "mc.sig~ @chans 32"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-13",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "signal" ],
+                                    "patching_rect": [ 50.0, 332.0, 84.0, 22.0 ],
+                                    "text": "mc.unpack~ 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-12",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "multichannelsignal" ],
+                                    "patching_rect": [ 50.0, 285.0, 92.0, 22.0 ],
+                                    "text": "mc.mixdown~ 2"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-11",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "multichannelsignal" ],
+                                    "patching_rect": [ 50.0, 222.0, 40.0, 22.0 ],
+                                    "text": "mc.*~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-10",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "multichannelsignal" ],
+                                    "patching_rect": [ 50.0, 100.0, 114.0, 22.0 ],
+                                    "text": "mc.sig~ @chans 32"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-9",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "multichannelsignal" ],
+                                    "patching_rect": [ 50.0, 156.0, 126.0, 22.0 ],
+                                    "text": "mc.cycle~ @chans 32"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "",
+                                    "id": "obj-18",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 50.0, 40.0, 30.0, 30.0 ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "",
+                                    "id": "obj-19",
+                                    "index": 2,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 208.0, 40.0, 30.0, 30.0 ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "",
+                                    "id": "obj-20",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 50.0, 414.0, 30.0, 30.0 ]
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-9", 0 ],
+                                    "source": [ "obj-10", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-12", 0 ],
+                                    "source": [ "obj-11", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-13", 0 ],
+                                    "source": [ "obj-12", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-20", 0 ],
+                                    "source": [ "obj-13", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-11", 1 ],
+                                    "source": [ "obj-14", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-10", 0 ],
+                                    "source": [ "obj-18", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-14", 0 ],
+                                    "source": [ "obj-19", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-11", 0 ],
+                                    "source": [ "obj-9", 0 ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [ 2007.0, 880.0, 90.0, 22.0 ],
+                    "text": "p addictiveSine"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-16",
+                    "maxclass": "toggle",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "int" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 857.5, 476.5899999999999, 24.0, 24.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-17",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "int" ],
+                    "patching_rect": [ 856.5, 546.5899999999999, 29.5, 22.0 ],
+                    "text": "+ 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-15",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 952.5, 526.0, 78.0, 22.0 ],
+                    "text": "selector~ 2 1"
+                }
+            },
+            {
+                "box": {
+                    "code": "inlets = 1;\noutlets = 2;\n// outlet 0: gain list\n// outlet 1: freq list\n\nconst NUM_MODES = 32;\n\nlet smooth = 0.12;\nlet intervalMs = 16;\n\nlet targetGain = new Array(NUM_MODES).fill(0);\nlet targetFreq = new Array(NUM_MODES).fill(0);\n\nlet currentGain = new Array(NUM_MODES).fill(0);\nlet currentFreq = new Array(NUM_MODES).fill(0);\n\nlet gainScale = 10.0;\n\nlet task = new Task(tick, this);\ntask.interval = intervalMs;\ntask.repeat();\n\nfunction anything(...args) {\n    // expected:\n    // /0 gain freq Q weight\n    // /1 gain freq Q weight\n    // ...\n    let idxRaw = messagename;\n\n    if (typeof idxRaw === \"string\") {\n        idxRaw = idxRaw.replace(\"/\", \"\");\n    }\n\n    const i = Math.floor(Number(idxRaw));\n\n    if (Number.isNaN(i)) return;\n    if (i < 0 || i >= NUM_MODES) return;\n    if (args.length < 2) return;\n\n    const gain = Number(args[0]);\n    const freq = Number(args[1]);\n\n    targetGain[i] = Math.min(1.0, gain * gainScale);\n    targetFreq[i] = freq;\n}\n\nfunction tick() {\n    for (let i = 0; i < NUM_MODES; i++) {\n        currentGain[i] += (targetGain[i] - currentGain[i]) * smooth;\n        currentFreq[i] += (targetFreq[i] - currentFreq[i]) * smooth;\n    }\n\n    emit();\n}\n\nfunction emit() {\n    outlet(1, currentFreq);\n    outlet(0, currentGain);\n}\n\nfunction bang() {\n    emit();\n}\n\nfunction clear() {\n    for (let i = 0; i < NUM_MODES; i++) {\n        targetGain[i] = 0;\n        targetFreq[i] = 0;\n        currentGain[i] = 0;\n        currentFreq[i] = 0;\n    }\n\n    emit();\n}\n\nfunction setsmooth(v) {\n    smooth = Math.max(0.001, Math.min(1.0, Number(v)));\n}\n\nfunction setinterval(v) {\n    intervalMs = Math.max(1, Number(v));\n    task.interval = intervalMs;\n}\n\nfunction setgainscale(v) {\n    gainScale = Math.max(0.0, Number(v));\n}",
+                    "filename": "none",
+                    "fontface": 0,
+                    "fontname": "<Monospaced>",
+                    "fontsize": 12.0,
+                    "id": "obj-4",
+                    "maxclass": "v8.codebox",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 2007.0, 559.0, 489.0, 273.0 ],
+                    "saved_object_attributes": {
+                        "parameter_enable": 0
+                    }
+                }
+            },
             {
                 "box": {
                     "id": "obj-1",
@@ -42,7 +302,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1791.0, 935.0, 88.0, 22.0 ],
+                    "patching_rect": [ 2431.0, 207.0, 88.0, 22.0 ],
                     "text": "prepend /QMin"
                 }
             },
@@ -53,7 +313,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1698.0, 935.0, 91.0, 22.0 ],
+                    "patching_rect": [ 2338.0, 207.0, 91.0, 22.0 ],
                     "text": "prepend /QMax"
                 }
             },
@@ -64,7 +324,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1791.0, 782.0, 51.0, 22.0 ],
+                    "patching_rect": [ 2431.0, 54.0, 51.0, 22.0 ],
                     "text": "r bwMin"
                 }
             },
@@ -75,7 +335,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1698.0, 782.0, 54.0, 22.0 ],
+                    "patching_rect": [ 2338.0, 54.0, 54.0, 22.0 ],
                     "text": "r bwMax"
                 }
             },
@@ -97,17 +357,6 @@
                     "numoutlets": 0,
                     "patching_rect": [ 851.0, 383.0, 56.0, 22.0 ],
                     "text": "s bwMax"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-339",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 984.0, 307.0, 44.0, 22.0 ],
-                    "text": "noise~"
                 }
             },
             {
@@ -340,7 +589,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 1603.0, 782.0, 60.0, 22.0 ],
+                    "patching_rect": [ 2243.0, 54.0, 60.0, 22.0 ],
                     "text": "rand~ 0.5"
                 }
             },
@@ -351,7 +600,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 1516.0, 782.0, 60.0, 22.0 ],
+                    "patching_rect": [ 2156.0, 54.0, 60.0, 22.0 ],
                     "text": "rand~ 0.5"
                 }
             },
@@ -362,7 +611,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 1429.0, 782.0, 60.0, 22.0 ],
+                    "patching_rect": [ 2069.0, 54.0, 60.0, 22.0 ],
                     "text": "rand~ 0.5"
                 }
             },
@@ -411,6 +660,8 @@
                     "patching_rect": [ 1189.0, 561.0, 41.0, 48.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
+                            "parameter_initial": [ 0.5 ],
+                            "parameter_initial_enable": 1,
                             "parameter_longname": "live.dial",
                             "parameter_mmax": 1.0,
                             "parameter_modmode": 3,
@@ -451,7 +702,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "float" ],
-                    "patching_rect": [ 1603.0, 888.0, 67.0, 22.0 ],
+                    "patching_rect": [ 2243.0, 160.0, 67.0, 22.0 ],
                     "text": "slide 10 10"
                 }
             },
@@ -462,7 +713,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "float" ],
-                    "patching_rect": [ 1516.0, 888.0, 67.0, 22.0 ],
+                    "patching_rect": [ 2156.0, 160.0, 67.0, 22.0 ],
                     "text": "slide 10 10"
                 }
             },
@@ -473,7 +724,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "float" ],
-                    "patching_rect": [ 1429.0, 888.0, 67.0, 22.0 ],
+                    "patching_rect": [ 2069.0, 160.0, 67.0, 22.0 ],
                     "text": "slide 10 10"
                 }
             },
@@ -483,7 +734,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1429.0, 1001.0, 138.0, 22.0 ],
+                    "patching_rect": [ 2069.0, 273.0, 138.0, 22.0 ],
                     "text": "udpsend 127.0.0.1 4900"
                 }
             },
@@ -498,7 +749,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "signal", "float" ],
-                    "patching_rect": [ 1603.0, 836.0, 56.0, 22.0 ],
+                    "patching_rect": [ 2243.0, 108.0, 56.0, 22.0 ],
                     "sig": 0.0
                 }
             },
@@ -513,7 +764,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "signal", "float" ],
-                    "patching_rect": [ 1516.0, 836.0, 56.0, 22.0 ],
+                    "patching_rect": [ 2156.0, 108.0, 56.0, 22.0 ],
                     "sig": 0.0
                 }
             },
@@ -528,7 +779,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "signal", "float" ],
-                    "patching_rect": [ 1429.0, 836.0, 56.0, 22.0 ],
+                    "patching_rect": [ 2069.0, 108.0, 56.0, 22.0 ],
                     "sig": 0.0
                 }
             },
@@ -539,7 +790,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1603.0, 935.0, 85.0, 22.0 ],
+                    "patching_rect": [ 2243.0, 207.0, 85.0, 22.0 ],
                     "text": "prepend /zpos"
                 }
             },
@@ -550,7 +801,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1516.0, 935.0, 85.0, 22.0 ],
+                    "patching_rect": [ 2156.0, 207.0, 85.0, 22.0 ],
                     "text": "prepend /ypos"
                 }
             },
@@ -561,7 +812,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1429.0, 935.0, 85.0, 22.0 ],
+                    "patching_rect": [ 2069.0, 207.0, 85.0, 22.0 ],
                     "text": "prepend /xpos"
                 }
             },
@@ -608,7 +859,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 982.0, 512.0, 45.0, 22.0 ],
+                    "patching_rect": [ 982.0, 778.0, 45.0, 22.0 ],
                     "text": "tanh~"
                 }
             },
@@ -619,7 +870,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1348.0, 424.0, 300.0, 100.0 ]
+                    "patching_rect": [ 1363.0, 277.0, 300.0, 100.0 ]
                 }
             },
             {
@@ -686,7 +937,7 @@
                     "maxclass": "v8.codebox",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1845.0, 546.5899999999999, 576.0, 273.0 ],
+                    "patching_rect": [ 1363.0, 559.0, 576.0, 273.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0
                     }
@@ -699,7 +950,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "", "" ],
-                    "patching_rect": [ 1845.0, 487.59, 73.0, 22.0 ],
+                    "patching_rect": [ 1363.0, 500.0, 73.0, 22.0 ],
                     "text": "route /mode"
                 }
             },
@@ -817,7 +1068,7 @@
                         "bgcolor": [ 0.776470588235294, 0.776470588235294, 0.776470588235294, 1.0 ],
                         "editing_bgcolor": [ 0.776470588235294, 0.776470588235294, 0.776470588235294, 1.0 ]
                     },
-                    "patching_rect": [ 1845.0, 441.59, 55.0, 22.0 ],
+                    "patching_rect": [ 1363.0, 454.0, 55.0, 22.0 ],
                     "saved_object_attributes": {
                         "editing_bgcolor": [ 0.776470588235294, 0.776470588235294, 0.776470588235294, 1.0 ],
                         "locked_bgcolor": [ 0.776470588235294, 0.776470588235294, 0.776470588235294, 1.0 ]
@@ -1049,7 +1300,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1845.0, 401.59, 97.0, 22.0 ],
+                    "patching_rect": [ 1363.0, 414.0, 97.0, 22.0 ],
                     "text": "udpreceive 5050"
                 }
             },
@@ -1086,7 +1337,7 @@
             },
             {
                 "box": {
-                    "code": "// inlets: 2\n// inlet0: 周波数リスト32個\n// inlet1: ゲインリスト32個\n// outlet0~31: /mode/i uFreq1 uFreq2 uFreq3 gain\n\ninlets = 2;\noutlets = 32;\n\nconst NUM_PEAKS = 32;\n\n// smoothing係数\n// 小さいほど滑らか・遅い\nlet smooth = 0.12;\n\n// 出力周期 ms\nlet intervalMs = 16; // 約60fps\n\nlet targetFreqs = new Array(NUM_PEAKS).fill(0);\nlet targetGains = new Array(NUM_PEAKS).fill(0);\n\nlet currentFreqs = new Array(NUM_PEAKS).fill(0);\nlet currentGains = new Array(NUM_PEAKS).fill(0);\n\nlet task = new Task(tick, this);\ntask.interval = intervalMs;\ntask.repeat();\n\nfunction list(...args) {\n    if (inlet === 0) {\n        for (let i = 0; i < NUM_PEAKS; i++) {\n            targetFreqs[i] = (i < args.length) ? args[i] : 0;\n        }\n    } else if (inlet === 1) {\n        for (let i = 0; i < NUM_PEAKS; i++) {\n            targetGains[i] = (i < args.length) ? args[i] : 0;\n        }\n    }\n}\n\nfunction tick() {\n    for (let i = 0; i < NUM_PEAKS; i++) {\n        currentFreqs[i] += (targetFreqs[i] - currentFreqs[i]) * smooth;\n        currentGains[i] += (targetGains[i] - currentGains[i]) * smooth;\n    }\n\n    emit();\n}\n\nfunction emit() {\n    for (let i = NUM_PEAKS - 1; i >= 0; i--) {\n        const f = currentFreqs[i] / 440.0;\n        const g = currentGains[i];\n\n        outlet(i, \"/mode/\" + i, f, f * 0.5, f * 0.4, g);\n    }\n}\n\nfunction bang() {\n    emit();\n}\n\n// smoothingを外から変えたい時用\nfunction setsmooth(v) {\n    smooth = Math.max(0.001, Math.min(1.0, v));\n}\n\n// 出力周期を変えたい時用\nfunction setinterval(v) {\n    intervalMs = Math.max(1, v);\n    task.interval = intervalMs;\n}",
+                    "code": "// inlets: 2\n// inlet0: 周波数リスト32個\n// inlet1: ゲインリスト32個\n// outlet0~31: /mode/i uFreq1 uFreq2 uFreq3 gain\n\ninlets = 2;\noutlets = 32;\n\nconst NUM_PEAKS = 32;\n\n// smoothing係数\n// 小さいほど滑らか・遅い\nlet smooth = 0.12;\n\n// 出力周期 ms\nlet intervalMs = 16; // 約60fps\n\nlet targetFreqs = new Array(NUM_PEAKS).fill(0);\nlet targetGains = new Array(NUM_PEAKS).fill(0);\n\nlet currentFreqs = new Array(NUM_PEAKS).fill(0);\nlet currentGains = new Array(NUM_PEAKS).fill(0);\n\nlet task = new Task(tick, this);\ntask.interval = intervalMs;\ntask.repeat();\n\nfunction list(...args) {\n    if (inlet === 0) {\n        for (let i = 0; i < NUM_PEAKS; i++) {\n            targetFreqs[i] = (i < args.length) ? args[i] : 0;\n        }\n    } else if (inlet === 1) {\n        for (let i = 0; i < NUM_PEAKS; i++) {\n            targetGains[i] = (i < args.length) ? args[i] : 0;\n        }\n    }\n}\n\nfunction tick() {\n    for (let i = 0; i < NUM_PEAKS; i++) {\n        currentFreqs[i] += (targetFreqs[i] - currentFreqs[i]) * smooth;\n        currentGains[i] += (targetGains[i] - currentGains[i]) * smooth;\n    }\n\n    emit();\n}\n\nfunction emit() {\n    for (let i = NUM_PEAKS - 1; i >= 0; i--) {\n        const f = currentFreqs[i] / 440.0;\n        const g = currentGains[i];\n\n        outlet(i, \"/mode/\" + i, f, f * 0.5, f * 0.75, g);\n    }\n}\n\nfunction bang() {\n    emit();\n}\n\n// smoothingを外から変えたい時用\nfunction setsmooth(v) {\n    smooth = Math.max(0.001, Math.min(1.0, v));\n}\n\n// 出力周期を変えたい時用\nfunction setinterval(v) {\n    intervalMs = Math.max(1, v);\n    task.interval = intervalMs;\n}",
                     "filename": "none",
                     "fontface": 0,
                     "fontname": "<Monospaced>",
@@ -1126,7 +1377,7 @@
             },
             {
                 "box": {
-                    "code": "inlets = 1;\noutlets = 2;\n\nconst FFT_SIZE = 2048;\nconst HALF_N = FFT_SIZE / 2;\nconst NUM_BINS = HALF_N;       // bin 0 〜 1023\nconst NUM_PEAKS = 32;\n\n// 窓関数補正 + FFT正規化 + 片側スペクトラム補正\n// Hann窓のコヒーレントゲイン = 0.5\n// 補正係数 = (2 / FFT_SIZE) * (1 / 0.5) = 4 / FFT_SIZE\nconst MAG_SCALE = 4.0 / FFT_SIZE;\n\nlet samplerate = 44100;\nlet realBufName = \"specReal\";\nlet imagBufName = \"specImg\";\n\nfunction bang() {\n    analyze();\n}\n\nfunction setsamplerate(sr) {\n    samplerate = sr;\n}\n\nfunction setbuffers(realName, imagName) {\n    realBufName = realName;\n    imagBufName = imagName;\n}\n\nfunction analyze() {\n    const realBuf = new Buffer(realBufName);\n    const imagBuf = new Buffer(imagBufName);\n    \n    if (!realBuf || !imagBuf) {\n        post(\"buffer~ not found\\n\");\n        return;\n    }\n    \n    const realSamples = realBuf.peek(1, 0, NUM_BINS);\n    const imagSamples = imagBuf.peek(1, 0, NUM_BINS);\n    \n    if (!realSamples || !imagSamples) {\n        post(\"failed to read buffers\\n\");\n        return;\n    }\n    \n    // 正規化済み magnitude\n    const mags = new Float64Array(NUM_BINS);\n    for (let k = 0; k < NUM_BINS; k++) {\n        const re = realSamples[k];\n        const im = imagSamples[k];\n        mags[k] = Math.sqrt(re * re + im * im) * MAG_SCALE;\n    }\n    \n    // ピーク検出 + QIFFT 補間\n    const binHz = samplerate / FFT_SIZE;\n    const peaks = [];\n    \n    for (let k = 1; k < NUM_BINS - 1; k++) {\n        const mPrev = mags[k - 1];\n        const mCur  = mags[k];\n        const mNext = mags[k + 1];\n        \n        if (mCur > mPrev && mCur > mNext) {\n            const denom = mPrev - 2 * mCur + mNext;\n            let dp = 0;\n            let magInterp = mCur;\n            if (Math.abs(denom) > 1e-20) {\n                dp = 0.5 * (mPrev - mNext) / denom;\n                magInterp = mCur - 0.25 * (mPrev - mNext) * dp;\n            }\n            const freq = (k + dp) * binHz;\n            peaks.push({ freq: freq, gain: magInterp });\n        }\n    }\n    \n    // 降順ソート → 上位32\n    peaks.sort((a, b) => b.gain - a.gain);\n    const topPeaks = peaks.slice(0, NUM_PEAKS);\n    \n    while (topPeaks.length < NUM_PEAKS) {\n        topPeaks.push({ freq: 0, gain: 0 });\n    }\n    \n    const freqList = topPeaks.map(p => p.freq);\n    const gainList = topPeaks.map(p => p.gain);\n    \n    outlet(1, gainList);\n    outlet(0, freqList);\n}",
+                    "code": "inlets = 1;\noutlets = 2;\n\nconst FFT_SIZE = 8192;\nconst HALF_N = FFT_SIZE / 2;\nconst NUM_BINS = HALF_N;       // bin 0 〜 1023\nconst NUM_PEAKS = 32;\n\n// 窓関数補正 + FFT正規化 + 片側スペクトラム補正\n// Hann窓のコヒーレントゲイン = 0.5\n// 補正係数 = (2 / FFT_SIZE) * (1 / 0.5) = 4 / FFT_SIZE\nconst MAG_SCALE = 4.0 / FFT_SIZE;\n\nlet samplerate = 44100;\nlet realBufName = \"specReal\";\nlet imagBufName = \"specImg\";\n\nfunction bang() {\n    analyze();\n}\n\nfunction setsamplerate(sr) {\n    samplerate = sr;\n}\n\nfunction setbuffers(realName, imagName) {\n    realBufName = realName;\n    imagBufName = imagName;\n}\n\nfunction analyze() {\n    const realBuf = new Buffer(realBufName);\n    const imagBuf = new Buffer(imagBufName);\n    \n    if (!realBuf || !imagBuf) {\n        post(\"buffer~ not found\\n\");\n        return;\n    }\n    \n    const realSamples = realBuf.peek(1, 0, NUM_BINS);\n    const imagSamples = imagBuf.peek(1, 0, NUM_BINS);\n    \n    if (!realSamples || !imagSamples) {\n        post(\"failed to read buffers\\n\");\n        return;\n    }\n    \n    // 正規化済み magnitude\n    const mags = new Float64Array(NUM_BINS);\n    for (let k = 0; k < NUM_BINS; k++) {\n        const re = realSamples[k];\n        const im = imagSamples[k];\n        mags[k] = Math.sqrt(re * re + im * im) * MAG_SCALE;\n    }\n    \n    // ピーク検出 + QIFFT 補間\n    const binHz = samplerate / FFT_SIZE;\n    const peaks = [];\n    \n    for (let k = 1; k < NUM_BINS - 1; k++) {\n        const mPrev = mags[k - 1];\n        const mCur  = mags[k];\n        const mNext = mags[k + 1];\n        \n        if (mCur > mPrev && mCur > mNext) {\n            const denom = mPrev - 2 * mCur + mNext;\n            let dp = 0;\n            let magInterp = mCur;\n            if (Math.abs(denom) > 1e-20) {\n                dp = 0.5 * (mPrev - mNext) / denom;\n                magInterp = mCur - 0.25 * (mPrev - mNext) * dp;\n            }\n            const freq = (k + dp) * binHz;\n            peaks.push({ freq: freq, gain: magInterp });\n        }\n    }\n    \n    // 降順ソート → 上位32\n    peaks.sort((a, b) => b.gain - a.gain);\n    const topPeaks = peaks.slice(0, NUM_PEAKS);\n    \n    while (topPeaks.length < NUM_PEAKS) {\n        topPeaks.push({ freq: 0, gain: 0 });\n    }\n    \n    const freqList = topPeaks.map(p => p.freq);\n    const gainList = topPeaks.map(p => p.gain);\n    \n    outlet(1, gainList);\n    outlet(0, freqList);\n}",
                     "filename": "none",
                     "fontface": 0,
                     "fontname": "<Monospaced>",
@@ -1183,7 +1434,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "float", "bang" ],
                     "patching_rect": [ 294.0, 45.0, 135.0, 22.0 ],
-                    "text": "buffer~ specImg 2048 1"
+                    "text": "buffer~ specImg 8192 1"
                 }
             },
             {
@@ -1194,7 +1445,7 @@
                     "numoutlets": 2,
                     "outlettype": [ "float", "bang" ],
                     "patching_rect": [ 24.0, 45.0, 139.0, 22.0 ],
-                    "text": "buffer~ specReal 2048 1"
+                    "text": "buffer~ specReal 8192 1"
                 }
             },
             {
@@ -1204,7 +1455,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 1058.0, 812.0, 116.0, 22.0 ],
-                    "text": "pfft~ freq.pfft 2048 1"
+                    "text": "pfft~ freq.pfft 8192 1"
                 }
             },
             {
@@ -1473,49 +1724,102 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-209", 0 ],
-                    "source": [ "obj-151", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-162", 0 ],
-                    "source": [ "obj-159", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-207", 0 ],
                     "order": 0,
-                    "source": [ "obj-209", 0 ]
+                    "source": [ "obj-15", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-224", 0 ],
                     "order": 2,
-                    "source": [ "obj-209", 0 ]
+                    "source": [ "obj-15", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-266", 0 ],
                     "order": 1,
-                    "source": [ "obj-209", 0 ]
+                    "source": [ "obj-15", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-15", 1 ],
+                    "source": [ "obj-151", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-162", 0 ],
+                    "order": 1,
+                    "source": [ "obj-159", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "order": 0,
+                    "source": [ "obj-159", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-17", 0 ],
+                    "source": [ "obj-16", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-15", 0 ],
+                    "source": [ "obj-17", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-326", 1 ],
                     "order": 1,
-                    "source": [ "obj-224", 0 ]
+                    "source": [ "obj-209", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-327", 1 ],
                     "order": 0,
+                    "source": [ "obj-209", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-15", 2 ],
+                    "midpoints": [ 2016.5, 903.0, 1242.0, 903.0, 1242.0, 522.0, 1021.0, 522.0 ],
+                    "source": [ "obj-21", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-279", 0 ],
+                    "order": 0,
+                    "source": [ "obj-22", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-316", 0 ],
+                    "order": 1,
+                    "source": [ "obj-22", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-209", 0 ],
                     "source": [ "obj-224", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-318", 0 ],
+                    "source": [ "obj-23", 0 ]
                 }
             },
             {
@@ -1700,6 +2004,33 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-151", 0 ],
+                    "order": 2,
+                    "source": [ "obj-323", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-238", 0 ],
+                    "order": 1,
+                    "source": [ "obj-323", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-328", 0 ],
+                    "order": 0,
+                    "source": [ "obj-323", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-329", 0 ],
+                    "source": [ "obj-323", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-1", 0 ],
                     "source": [ "obj-326", 0 ]
                 }
@@ -1744,34 +2075,6 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-151", 0 ],
-                    "order": 3,
-                    "source": [ "obj-339", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-238", 0 ],
-                    "order": 2,
-                    "source": [ "obj-339", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-328", 0 ],
-                    "order": 1,
-                    "source": [ "obj-339", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-329", 0 ],
-                    "order": 0,
-                    "source": [ "obj-339", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-345", 0 ],
                     "source": [ "obj-342", 0 ]
                 }
@@ -1792,6 +2095,18 @@
                 "patchline": {
                     "destination": [ "obj-259", 0 ],
                     "source": [ "obj-345", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-21", 0 ],
+                    "source": [ "obj-4", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-21", 1 ],
+                    "source": [ "obj-4", 0 ]
                 }
             },
             {
